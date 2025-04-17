@@ -92,7 +92,7 @@ function registroDOM() {
             sessionStorage.setItem('usuario', correoDOM.value);
 
             // Se redirige a la pagina de la lista de tareas
-            window.location.href = '/ToDo%20Login/Tareas/index.html';
+            window.location.href = '../Tareas/index.html';
         } else {
             mensajeError();
             informacionErrores.textContent = 'Verifique los datos y vuelva a intentar.';
@@ -113,7 +113,7 @@ function registroDOM() {
         if (datosCorrectos) {
             // Si los datos son corretos, envia los datos al session y se redirige al ToDo List
             sessionStorage.setItem('usuario', correoDOM.value);
-            window.location.href = '/ToDo%20Login/Tareas/index.html';
+            window.location.href = '../Tareas/index.html';
         } else {
             mensajeError()
             informacionErrores.textContent = 'La contraseña no es correcta.';
