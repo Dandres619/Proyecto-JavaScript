@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body class="p-0 m-0">
+    <main class="main__container d-flex justify-content-center align-items-center min-vh-100 text-center bg-dark">
+        <section class="bg-light shadow-lg p-5 rounded d-flex flex-column gap-3 text-dark" id="main__content">
+            <h1>Iniciar sesión</h1> 
+            <div class="informacion-usuario d-flex flex-column gap-3">
+                <input type="email" class="rounded border p-1 border-dark" id="correo-usuario" placeholder="Correo" required>
+                <input type="password" class="rounded border p-1 border-dark" id="contrasena-usuario" placeholder="Contraseña" required>
+                <p id="informacion-datos"></p>
+            </div>
+            <button class="btn btn-success" id="login__boton">Registrarse</button>
+        </section>
+    </main>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="LogIn/login.js"></script>
+</body>
+</html>

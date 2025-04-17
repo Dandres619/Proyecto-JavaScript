@@ -1,0 +1,13 @@
+body {
+    background-color:  #1E1E2E;
+    height: 100vh;
+}
+
+.modal-content {
+    color: #ffffff;
+    background-color: #1E1E2E;
+}
+
+.btn-close {
+    filter: invert(1)
+}

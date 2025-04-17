@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column text-white">
+    <nav class="navbar navbar-dark bg-dark shadow">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Lista de tareas</span>
+          <span class="navbar-brand mb-0" id="usuario-navbar"></span>
+        </div>
+    </nav>
+
+    <main class="d-flex justify-content-center align-items-center flex-column flex-grow-1 p-4">
+        <section id="tareas__container" class="bg-dark text-light text-center rounded shadow p-4">
+            <div class="tareas__header bg-secondary rounded p-3 mb-3">
+                <h1 class="h4 fw-bold">LISTA DE TAREAS</h1>
+            </div>
+    
+            <div class="tareas__content">
+                <form class="form__container row g-3 justify-content-center mb-4">
+                    <div class="col-md-3">
+                        <input type="text" class="form-control bg-info text-light border-primary" id="tarea-input" placeholder="Nombre de la tarea" required>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control bg-info text-light border-primary" id="descripcion-input" placeholder="Descripcion" required>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="datetime-local" class="form-control bg-info text-light border-primary" id="fecha-input" required>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-success w-100 fw-bold">Agregar</button>
+                    </div>
+                </form>
+        
+                <div class="tareas-informacion">
+                    <div class="mb-3">
+                        <button class="btn btn-outline-light btn-sm filtro" data-filtro="todas">Todas</button>
+                        <button class="btn btn-outline-success btn-sm filtro" data-filtro="completadas">Completadas</button>
+                        <button class="btn btn-outline-warning btn-sm filtro" data-filtro="pendientes">Pendientes</button>
+                    </div>
+                    <ul class="tareas-lista p-0">
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal" id="miModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">Configuraciones</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column gap-3">
+                        <div class="color-model d-flex align-items-center gap-2">
+                            <label for="color-input">Color de la pagina:</label>
+                            <input type="color" class="border-primary" id="color-input" value="#ffffff">
+                        </div>
+                        <div class="tamano-modal d-flex flex-column gap-1">
+                            <label for="tamano-input">Tamaño de la letra:</label>
+                            <input type="text" class="border rounded border-primary p-1" id="tamano-input" placeholder="16px">
+                        </div>
+                        <div class="fuente-modal d-flex flex-column gap-1">
+                            <label for="fuente-input">Fuente de la letra:</label>
+                            <input type="text" class="border rounded border-primary p-1" id="fuente-input" placeholder="'Arial', sans-serif">
+                        </div>
+                        <div class="letra-modal d-flex flex-column gap-1">
+                            <label for="letra-input">Color de la letra:</label>
+                            <input type="text" class="border rounded border-primary p-1" id="letra-input" placeholder="#000000">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="aplicar-cambios">Aplicar</button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </main>
+
+    <footer>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#miModal">
+            &#9881;
+        </button>
+    </footer>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="tareas.js"></script>
+    <script src="configuracion.js"></script>
+</body>
+</html>
